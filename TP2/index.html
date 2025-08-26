@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>TP2: Registro</title>
+</head>
+
+<body>
+
+    <h1>Formulario de registro</h1>
+
+    <form>
+
+        <!-- 1. Nombre completo -->
+        <div>
+            <label for="nombre">Nombre completo</label><br>
+            <input id="nombre" name="nombre" type="text" required placeholder="Ej: Juan Pérez" tabindex="1"
+                autocomplete="name">
+        </div>
+
+        <!-- 2. Correo -->
+        <div>
+            <label for="correo">Correo electronico</label><br>
+            <input id="correo" name="correo" type="email" required placeholder="Ej: correo@ejemplo.com" tabindex="2"
+                autocomplete="email">
+        </div>
+
+        <!-- 3. Contraseña -->
+        <div>
+            <label for="contrasena">Contraseña</label><br>
+            <input id="contrasena" name="contrasena" type="password" required placeholder="Mínimo 8 caracteres"
+                minlength="8" tabindex="3" autocomplete="new-password">
+        </div>
+
+        <!-- 4. Genero -->
+        <fieldset>
+            <legend>Genero</legend>
+
+            <input id="genero-m" name="genero" type="radio" value="masculino" required tabindex="4">
+            <label for="genero-m">Masculino</label><br>
+
+            <input id="genero-f" name="genero" type="radio" value="femenino" tabindex="5">
+            <label for="genero-f">Femenino</label><br>
+
+            <input id="genero-o" name="genero" type="radio" value="otro" tabindex="6">
+            <label for="genero-o">Otro</label>
+        </fieldset>
+
+        <!-- 5. Intereses -->
+        <fieldset>
+            <legend>Intereses</legend>
+
+            <input id="int-musica" name="intereses" type="checkbox" value="musica" tabindex="7">
+            <label for="int-musica">Musica</label><br>
+
+            <input id="int-deporte" name="intereses" type="checkbox" value="deporte" tabindex="8">
+            <label for="int-deporte">Deporte</label><br>
+
+            <input id="int-lectura" name="intereses" type="checkbox" value="lectura" tabindex="9">
+            <label for="int-lectura">Lectura</label><br>
+
+            <input id="int-videojuegos" name="intereses" type="checkbox" value="videojuegos" tabindex="10">
+            <label for="int-videojuegos">Videojuegos</label><br>
+
+            <input id="int-cocinar" name="cocinar" type="checkbox" value="cocinar" tabindex="10">
+            <label for="int-cocinar">Cocinar</label>
+
+        </fieldset>
+
+        <!-- 6. Comentarios adicionales -->
+        <div>
+            <label for="comentarios">Comentarios adicionales</label><br>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="40"
+                placeholder="Escribi aca cualquier comentario adicional..." tabindex="11"></textarea>
+        </div>
+
+        <!-- 7. Pais -->
+        <div>
+            <label for="pais">Pais</label><br>
+            <select id="pais" name="pais" required tabindex="12">
+                <option value="" selected disabled>Selecciona un pais</option>
+                <option value="ar">Argentina</option>
+                <option value="br">Brasil</option>
+                <option value="cl">Chile</option>
+            </select>
+        </div>
+
+        <!-- 8. Boton de envio -->
+        <div>
+            <br><br>
+            <input type="submit" value="Enviar" tabindex="13">
+        </div>
+
+    </form>
+
+</body>
+
+</html>
