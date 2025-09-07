@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Practica CSS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- 1. Introduccion a CSS -->
+  <header>
+    <h1 class="titulo-sombreado">Practica: Fundamentos de CSS</h1>
+    <p class="intro">
+      CSS (Cascading Style Sheets) es el lenguaje que se usa para dar estilo y diseño
+      a las paginas web. Sirve para definir colores, tipografias, tamaños, espacios
+      y distribucion de los elementos, separando la estructura (HTML) de la presentacion (CSS).
+    </p>
+  </header>
+
+  <hr/>
+
+  <!-- 2. Selectores en CSS -->
+  <section>
+    <h2>2) Selectores en CSS</h2>
+    <p id="parrafo-por-id">Parrafo con <strong>id</strong>: se estiliza con #parrafo-por-id.</p>
+    <p class="parrafo-por-clase">Parrafo con <strong>class</strong>: se estiliza con .parrafo-por-clase.</p>
+    <p>Este parrafo se estiliza por <strong>tag</strong> (selector de etiqueta p).</p>
+  </section>
+
+  <hr/>
+
+  <!-- 3. Modificacion de Texto -->
+  <section>
+    <h2>3) Modificacion de Texto</h2>
+    <h3 class="titulo-tipografico">Titulo con sombra y MAYUSCULAS</h3>
+    <p class="texto-espaciado">
+      Este parrafo tiene <em>line-height</em> amplio y <em>letter-spacing</em> grande
+      para apreciar el efecto visual de la separacion entre lineas y letras.
+    </p>
+    <blockquote class="cita">
+      "Lo que no te mata te hace mas fuerte" - Friedrich Nietzsche
+    </blockquote>
+  </section>
+
+  <hr/>
+
+  <!-- 4. Modelo de Caja - Tarjeta -->
+  <section>
+    <h2>4) Modelo de Caja — Tarjeta de Perfil</h2>
+    <div class="tarjeta">
+      <div class="avatar"></div>
+      <h4 class="tarjeta__titulo">Ada Lovelace</h4>
+      <p class="tarjeta__texto">
+        Pionera de la programacion. Esta tarjeta usa variables CSS para fondos, textos y acentos.
+      </p>
+      <button class="btn-acento">Seguir</button>
+    </div>
+
+    <p class="nota">
+      <strong>Nota sobre box-sizing:</strong> ver comentarios dentro de styles.css
+      explicando la diferencia entre border-box y content-box.
+    </p>
+  </section>
+
+  <hr/>
+
+  <!-- 5. Galeria de tarjetas + display/visibility -->
+  <section>
+    <h2>5) Galeria de Tarjetas &amp; Tipos de Display</h2>
+
+    <h3>a) display: block </h3>
+    <div class="galeria galeria--block">
+      <div class="card">Card A</div>
+      <div class="card">Card B</div>
+      <div class="card">Card C</div>
+    </div>
+
+    <h3>b) display: inline </h3>
+    <div class="galeria galeria--inline">
+      <div class="card-inline">Card A</div>
+      <div class="card-inline">Card B</div>
+      <div class="card-inline">Card C</div>
+    </div>
+
+    <h3>c) display: inline-block </h3>
+    <div class="galeria galeria--inlineblock">
+      <div class="card-ib">Card A</div>
+      <div class="card-ib">Card B</div>
+      <div class="card-ib">Card C</div>
+    </div>
+
+    <div class="visibilidad">
+      <button class="btn-toggle-none">Boton con display: none</button>
+      <button class="btn-toggle-hidden">Boton con visibility: hidden</button>
+      <p class="explicacion">
+        Diferencia: display: none quita el elemento del flujo del documento (no ocupa espacio).
+        visibility: hidden lo hace invisible, pero mantiene el espacio que ocuparia.
+      </p>
+    </div>
+  </section>
+
+  <hr/>
+
+    <!-- 6. Variables CSS / Temas -->
+  <section>
+    <h2>6) Variables CSS — Cambiar Tema Rápido</h2>
+
+    <div class="tarjeta tema">
+      <div class="avatar"></div>
+      <h4 class="tarjeta__titulo">Tarjeta con Variables para tema oscuro</h4>
+      <p class="tarjeta__texto">
+        Esta tarjeta utiliza --color-fondo, --color-texto y --color-acento
+      </p>
+    </div>
+  </section>
+
+
+  <footer>
+    <hr/>
+   
+  </footer>
+
+</body>
+</html>

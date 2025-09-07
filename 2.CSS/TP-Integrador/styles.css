@@ -1,0 +1,185 @@
+/* === Reset y basicos === */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system;
+  line-height: 1.5;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+/* === Variables === */
+:root{
+  --bg: #f8fafc;
+  --panel: #fff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --primary: #2563eb;
+  --primary-600: #1d4ed8;
+  --primary-700: #1e40af;
+  --accent: #eb7b25;
+  --danger: #dc2626;
+  --radius: 14px;
+  --shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+  --container: 1100px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+}
+
+/* utilidades base */
+.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--space-4); }
+.panel {
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space-6);
+  margin-top: var(--space-8);
+}
+h2 { margin-bottom: var(--space-4); }
+.code-note { color: var(--muted); font-size: 14px; }
+
+/* === Header responsivo (sticky) === */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+.site-header__inner {
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.site-header__logo {
+  display: inline-flex; align-items: center; gap: var(--space-3);
+  color: var(--text); text-decoration: none; font-weight: 700;
+}
+
+/* ayuda para el icono*/
+.site-header__mark {
+width: 36px;
+height: 36px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient(135deg, var(--primary), var(--accent));
+color: #fff;
+font-weight: 800;
+}
+
+.site-nav { display: none; gap: var(--space-6); }
+.site-nav a { color: var(--text); text-decoration: none; font-weight: 600; }
+.site-nav a:hover { color: var(--primary); }
+
+.site-header__menu-btn {
+  background: transparent; border: 0; padding: var(--space-2); cursor: pointer;
+}
+.site-header__menu-btn img { width: 28px; height: 28px; display: block; }
+
+/* nav visible en pantallas anchas */
+@media (min-width: 768px) {
+  .site-nav { display: flex; }
+  .site-header__menu-btn { display: none; }
+}
+
+/* === Bloque 3: Sistema de Botones === */
+.btn {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  min-height: 40px;
+  padding: 0 var(--space-4);
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: var(--panel);
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, color .2s ease, opacity .2s ease;
+}
+.btn img { width: 16px; height: 16px; display: inline-block; }
+
+.btn--primary { background: var(--primary); color: #fff; }
+.btn--primary:hover { background: var(--primary-600); }
+.btn--secondary { background: #e2e8f0; }
+.btn--secondary:hover { background: #cbd5e1; }
+.btn--outline { background: transparent; border-color: var(--primary); color: var(--primary); }
+.btn--outline:hover { background: #eff6ff; }
+.btn--danger { background: var(--danger); color: #fff; }
+.btn--danger:hover { filter: brightness(0.95); }
+
+
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+
+.btn-group {
+  display: flex; flex-wrap: wrap; gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+/* === Bloque 4: Tarjeta de Producto === */
+.product-card {
+  display: grid; gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+.product-card__media {
+  position: relative; width: 100%; height: 240px; overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid #e5e7eb;
+  box-shadow: var(--shadow);
+}
+.product-card__media img {
+  width: 100%; height: 100%; object-fit: cover; 
+  display: block;
+}
+.product-card__badge {
+  position: absolute; top: var(--space-3); left: var(--space-3);
+  background: var(--accent); color: #fff; font-weight: 700;
+  padding: var(--space-2) var(--space-3);
+  border-radius: 9999px;
+  font-size: 12px;
+}
+.product-card__info { display: grid; gap: var(--space-3); }
+.product-card__title { font-size: 20px; font-weight: 800; }
+.product-card__desc { color: var(--muted); }
+.product-card__prices { display: flex; align-items: center; gap: var(--space-3); }
+.product-card__price { color: var(--primary-700); font-weight: 800; }
+.product-card__old-price { color: var(--muted); text-decoration: line-through; }
+
+/* === Footer simple === */
+.site-footer { margin: var(--space-12) 0 var(--space-8); }
+
+/* === Layout con GRID 60/40, alto auto y ancho igual en mobile === */
+.layout-row {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); /* 60% / 40% */
+  gap: var(--space-6);
+  max-width: var(--container);
+  margin: var(--space-8) auto 0;
+  padding: 0 var(--space-4);
+  align-items: start;      
+  justify-items: stretch;  
+}
+
+/* anular restricciones del .container interno para que ocupen todo el grid */
+.layout-row > .container.panel {
+  margin-top: 0;       /* sin margen extra arriba dentro del grid */
+  max-width: 100%;     /* evita que el max-width del .container limite el ancho */
+  width: 100%;         /* garantiza que cada panel estire al 100% de la columna */
+  padding: var(--space-6); /* mantiene padding visual del panel */
+  box-sizing: border-box;
+}
+
+/* en pantallas chicas, stack vertical con el mismo ancho */
+@media (max-width: 768px) {
+  .layout-row {
+    grid-template-columns: 1fr; /* una columna */
+  }
+  .layout-row > .container.panel {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+

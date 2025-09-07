@@ -1,0 +1,224 @@
+
+* {
+  box-sizing: border-box;
+  /* 
+    DIFERENCIA ENTRE box-sizing:
+    - border-box: el width/height INCLUYE padding y border. Es mas predecible para layouts.
+    - content-box (valor por defecto del navegador): el width/height aplica SOLO al contenido.
+      El padding y border se SUMAN por fuera y pueden "romper" tamaños esperados.
+  */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, Roboto, Arial;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+  padding: 24px;
+}
+
+/*
+  1) INTRODUCCION
+*/
+.titulo-sombreado {
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0,0,0,.15);
+  letter-spacing: 1px;
+  margin: 0 0 8px;
+}
+
+.intro {
+  max-width: 70ch;
+  margin: 0 0 16px;
+}
+
+/* separadores visuales */
+hr {
+  border: 0;
+  border-top: 1px solid var(--color-borde);
+  margin: 24px 0;
+}
+
+/*
+  2) SELECTORES
+*/
+/* selector por ID */
+#parrafo-por-id {
+  background: #e0f2fe;
+  padding: 8px 12px;
+}
+
+/* selector por clase */
+.parrafo-por-clase {
+  background: #fff697;
+  padding: 8px 12px;
+}
+
+/* selector por tag para todos los <p> */
+p {
+  font-size: 16px;
+}
+
+/* 
+  3) MODIFICACION DE TEXTO
+*/
+.titulo-tipografico {
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15), 0 4px 8px rgba(0,0,0,.08);
+  letter-spacing: 2px;
+  margin: 16px 0 8px;
+}
+
+.texto-espaciado {
+  line-height: 2;       
+  letter-spacing: 2px;  
+  max-width: 60ch;
+}
+
+.cita {
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif; 
+  background: #f3f4f6;
+  border-left: 4px solid #9ca3af;
+  padding: 12px 16px;
+  margin: 12px 0;
+}
+
+/* 
+  4) TARJETA (Modelo de Caja)
+*/
+.tarjeta {
+  width: 320px;
+  background: #fff;
+  color: var(--color-texto);
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;               
+  box-shadow: 0 10px 24px rgba(0,0,0,.08); 
+  padding: 16px;                  
+  margin: 12px 0;                   
+  background-color: var(--color-fondo); 
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  background: var(--color-acento);   
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.tarjeta__titulo {
+  font-size: 20px;
+  margin: 8px 0 6px;
+}
+
+.tarjeta__texto {
+  margin: 0 0 12px;
+}
+
+.btn-acento {
+  background: var(--color-acento);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-acento:hover {
+  filter: brightness(1.05);
+}
+
+.nota {
+  font-size: 14px;
+  color: #374151;
+}
+
+/*
+   5) GALERIA Y DISPLAY / VISIBILITY
+*/
+.galeria {
+  background: #ffffff;
+  border: 1px dashed var(--color-borde);
+  padding: 12px;
+  margin: 8px 0 20px;
+}
+
+/* a) block: por defecto los div son block y se apilan */
+.galeria--block .card {
+  background: #6488ff;
+  border: 1px solid #001f9b;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 8px 0; 
+  width: 260px;  
+}
+
+/* b) inline */
+.galeria--inline .card-inline {
+  display: inline;               
+  background: #76f0a1;           
+  margin: 8px;                   
+  padding: 0;                    
+}
+
+/* c) inline-block*/
+.galeria--inlineblock .card-ib {
+  display: inline-block;
+  background: #ff6c76;
+  border: 1px solid #fb2735;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 8px;
+  width: 180px;     
+  vertical-align: top;
+}
+
+.visibilidad {
+  margin-top: 12px;
+}
+
+.btn-toggle-none {
+  display: none; 
+}
+
+.btn-toggle-hidden {
+  visibility: hidden; 
+}
+
+.explicacion {
+  font-size: 14px;
+  background: #f8fafc;
+  border: 1px solid var(--color-borde);
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* 
+  6. VARIABLES
+*/
+
+/* Variables globales tema claro por defecto */
+:root {
+  --color-fondo: #f7f7fb;
+  --color-texto: #1f2937;
+  --color-acento: #19245c;
+  --color-borde: #e5e7eb;
+}
+
+/* Variables aplicadas SOLO a la tarjeta con clase .tema */
+.tarjeta.tema {
+  --color-fondo: #0b1020;
+  --color-texto: #e5e7eb;
+  --color-acento: #22d3ee;
+  --color-borde: #1f2937;
+
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  border: 2px solid var(--color-acento);
+}

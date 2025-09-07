@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trabajo Practico Integrador</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+
+  <!-- Bloque 2: Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="#top" class="site-header__logo" aria-label="Inicio">
+        <span class="site-header__mark" aria-hidden="true">M</span>
+        <span>MiTienda</span>
+      </a>
+
+      <!-- nav desktop -->
+      <nav class="site-nav" aria-label="Principal">
+        <a href="#novedades">Novedades</a>
+        <a href="#ofertas">Ofertas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <!-- boton para mobile -->
+      <button class="site-header__menu-btn" aria-label="Abrir menu">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6h16" /><path d="M7 12h13" /><path d="M10 18h10" /></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+
+    <!-- Bloque 3: Sistema de Botones -->
+    <div class="layout-row">
+        <section class="container panel">
+        <h2>1)Sistema de botones</h2>
+
+        <!-- grupo de botones con flex y BEM -->
+        <div class="btn-group">
+            <button class="btn btn--primary">Primario</button>
+            <button class="btn btn--secondary">Secundario</button>
+            <button class="btn btn--outline">Outline</button>
+            <button class="btn btn--danger">Peligro</button>
+            <button class="btn btn--icon">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+            Buscar
+            </button>
+            <button class="btn btn--primary" disabled>Deshabilitado</button>
+        </div>
+
+        </section>
+
+        <!-- Bloque 4: Tarjeta de Producto -->
+        <section class="container panel">
+        <h2>2)Tarjeta de producto</h2>
+
+        <article class="product-card">
+            <div class="product-card__media">
+            <img src="img/zapatillas.webp" alt="zapatillas" />
+            <span class="product-card__badge">Nuevo</span>
+            </div>
+
+            <div class="product-card__info">
+            <h3 class="product-card__title">Zapatillas Runner</h3>
+            <p class="product-card__desc">
+                Amortiguacion ligera, malla respuirable y suela de goma antideslizante. Perferctas para entrenar todos los dias.
+            </p>
+
+            <div class="product-card__prices">
+                <span class="product-card__price">$ 49.990</span>
+                <span class="product-card__old-price">$ 59.990</span>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn--primary">Comprar Ahora</button>
+                <button class="btn btn--outline">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-dashed-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95" /><path d="M3.69 8.56a9 9 0 0 0 -.69 3.44" /><path d="M3.69 15.44a9 9 0 0 0 1.95 2.92" /><path d="M8.56 20.31a9 9 0 0 0 3.44 .69" /><path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95" /><path d="M20.31 15.44a9 9 0 0 0 .69 -3.44" /><path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92" /><path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69" /><path d="M9 12h6" /><path d="M12 9v6" /></svg>
+                    Añadir al carrito
+                </button>
+            </div>
+            </div>
+        </article>
+
+        </section>
+    </div>
+
+    <!-- Bloque 6: Secciones de relleno con anclas -->
+    <section id="novedades" class="container panel">
+      <h2>Novedades</h2>
+      <p class="code-note">Seccion de relleno para probar el menu</p>
+    </section>
+
+    <section id="ofertas" class="container panel">
+      <h2>Ofertas</h2>
+      <p class="code-note">Otra seccion de relleno</p>
+    </section>
+
+    <section id="contacto" class="container panel">
+      <h2>Contacto</h2>
+      <p class="code-note">Mas contenido de ejemplo</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="code-note">resolucion trabajo practico integrador css</p>
+    </div>
+  </footer>
+</body>
+</html>
