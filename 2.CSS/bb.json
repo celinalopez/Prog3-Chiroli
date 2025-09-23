@@ -1,0 +1,39 @@
+
+coleccion pacientes
+{
+    id_paciente
+    nobmre
+    dni
+    fecha_nacimiento
+    historia_clinica:[ // EMBEBIDA
+        diagnosticos [{nombre1, fecha1, nota1}, {nombre2, fecha2, nota2}]
+        tratamientos[{nombre1, desde1, hasat1}, {nombre2, desde2, hasta2}]
+        estudios [{tipo1, fecha1, resultado1}, {tipo1, fecha2, resultado2}]
+    ]
+
+}
+
+coleccion medicos
+{
+    id_medico
+    nombre
+    especialidad
+}
+
+coleccion turnos
+{
+    id_turno
+    fecha
+    paciente {id_paciente, nombre, dni, fecha_nacimiento}
+    medico {id_medico, nombre, especialidad}
+}
+
+coleccion historias clinicas
+{
+    id_historiaclinica
+    diagnosticos [{nombre1, fecha1, nota1}, {nombre2, fecha2, nota2}]
+    tratamientos[{nombre1, desde1, hasat1}, {nombre2, desde2, hasta2}]
+    estudios [{tipo1, fecha1, resultado1}, {tipo1, fecha2, resultado2}]
+
+}
+
