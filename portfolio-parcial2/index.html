@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Celina Lopez | Oracle NetSuite Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fuente similar a la del diseño -->
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    />
+</head>
+<body>
+<div id="app">
+    <aside class="sidebar">
+        <!-- Columna de iconos -->
+        <nav class="sidebar-icons">
+            <button class="icon-link active" data-target="inicio" aria-label="Inicio">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="M220-180h150v-250h220v250h150v-390L480-765 220-570v390Zm-60 60v-480l320-240 320 240v480H530v-250H430v250H160Zm320-353Z"/></svg>
+            </button>
+            <button class="icon-link" data-target="about" aria-label="Sobre mi">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40x" fill="#e3e3e3"><path d="M480-481q-66 0-108-42t-42-108q0-66 42-108t108-42q66 0 108 42t42 108q0 66-42 108t-108 42ZM160-160v-94q0-38 19-65t49-41q67-30 128.5-45T480-420q62 0 123 15.5t127.92 44.69q31.3 14.13 50.19 40.97Q800-292 800-254v94H160Zm60-60h520v-34q0-16-9.5-30.5T707-306q-64-31-117-42.5T480-360q-57 0-111 11.5T252-306q-14 7-23 21.5t-9 30.5v34Zm260-321q39 0 64.5-25.5T570-631q0-39-25.5-64.5T480-721q-39 0-64.5 25.5T390-631q0 39 25.5 64.5T480-541Zm0-90Zm0 411Z"/></svg>
+            </button>
+            <button class="icon-link" data-target="skills" aria-label="Skills">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg>
+            </button>
+            <button class="icon-link" data-target="projects" aria-label="Proyectos">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="M180-120q-24.75 0-42.37-17.63Q120-155.25 120-180v-600q0-24.75 17.63-42.38Q155.25-840 180-840h205q5-35 32-57.5t63-22.5q36 0 63 22.5t32 57.5h205q24.75 0 42.38 17.62Q840-804.75 840-780v600q0 24.75-17.62 42.37Q804.75-120 780-120H180Zm0-60h600v-600H180v600Zm100-100h273v-60H280v60Zm0-170h400v-60H280v60Zm0-170h400v-60H280v60Zm200-177q14 0 24.5-10.5T515-832q0-14-10.5-24.5T480-867q-14 0-24.5 10.5T445-832q0 14 10.5 24.5T480-797ZM180-180v-600 600Z"/></svg>
+            </button>
+            <button class="icon-link" data-target="experience" aria-label="Experiencia">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="M140-120q-24 0-42-18t-18-42v-480q0-24 18-42t42-18h180v-100q0-24 18-42t42-18h200q24 0 42 18t18 42v100h180q24 0 42 18t18 42v480q0 24-18 42t-42 18H140Zm0-60h680v-480H140v480Zm240-540h200v-100H380v100ZM140-180v-480 480Z"/></svg>
+            </button>
+            <button class="icon-link" data-target="contact" aria-label="Contacto">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="M140-160q-24 0-42-18t-18-42v-520q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm340-302L140-685v465h680v-465L480-462Zm0-60 336-218H145l335 218ZM140-685v-55 520-465Z"/></svg>
+            </button>
+        </nav>
+
+        <!-- Perfil -->
+        <div class="sidebar-profile">
+            <div class="profile-avatar">
+                <!-- poné tu imagen en public/profile.jpg o cambia la ruta -->
+                <img src="public/profile.jpg" alt="Foto de Celina Lopez" />
+            </div>
+            <h1 class="profile-name">Celina Lopez</h1>
+            <p class="profile-role">Oracle NetSuite Developer</p>
+
+            <div class="profile-links">
+                <a href="https://github.com/celinalopez" target="_blank" rel="noreferrer" title="GitHub">
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/celina-lopez-8a6150200/" target="_blank" rel="noreferrer" title="LinkedIn">
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+
+            <p class="profile-summary">
+                Desarrolladora Oracle NetSuite con 2 años de experiencia en SuiteScript 2.x, creación de Saved Searches,
+                Workflows y reportes personalizados. Experta en automatización de procesos e integraciones REST/SOAP, con
+                foco en optimizar la gestión financiera y operativa en NetSuite.
+            </p>
+
+            <div class="profile-actions">
+                <a class="btn primary" href="/cv-celina-lopez.pdf" download>Download CV</a>
+                <a class="btn outline" href="#contact">Hablemos!</a>
+            </div>
+        </div>
+    </aside>
+
+    <main class="content">
+        <!-- INICIO -->
+        <section id="inicio" class="section inicio">
+            <div class="inicio-inner">
+                <p class="inicio-title">Hola Mundo!</p>
+                <h2 class="inicio-title">
+                    Soy <span class="accent">Celina Lopez;</span>
+                </h2>
+                <p class="inicio-location">
+                    De <span class="accent">Mendoza</span>, Argentina
+                </p>
+
+                <div class="inicio-stats">
+                    <div class="stat">
+                        <span class="stat-value">+2</span>
+                        <span class="stat-label"> <br>Años de experiencia</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">+30</span>
+                        <span class="stat-label"><br> Proyectos finalizados</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="54px" viewBox="0 -960 960 960" width="54px" fill="#e3e3e3"><path d="M212-260q-90 0-151-65.5T0-482q0-90 61.5-154T212-700q36 0 69.5 12t59.5 37l93 90-42 42-89-87q-18-18-41.5-26t-49.5-8q-64 0-108 46.5T60-482q0 66 43.5 114T212-320q25 0 48.5-8t42.5-25l316-298q26-25 59.5-37t68.5-12q90 0 151.5 64T960-482q0 91-61.5 156.5T747-260q-35 0-69-11.5T619-308l-91-90 42-42 87 87q17 17 41 25t49 8q65 0 109-48t44-114q0-65-44.5-111.5T747-640q-25 0-48.5 9T657-605L341-307q-26 24-60 35.5T212-260Z"/></svg>
+                        </span>
+                        <span class="stat-label"> <br> Por aprender</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MI -->
+        <section id="about" class="section">
+            <header class="section-header">
+                <span class="section-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40x" fill="#e3e3e3"><path d="M480-481q-66 0-108-42t-42-108q0-66 42-108t108-42q66 0 108 42t42 108q0 66-42 108t-108 42ZM160-160v-94q0-38 19-65t49-41q67-30 128.5-45T480-420q62 0 123 15.5t127.92 44.69q31.3 14.13 50.19 40.97Q800-292 800-254v94H160Zm60-60h520v-34q0-16-9.5-30.5T707-306q-64-31-117-42.5T480-360q-57 0-111 11.5T252-306q-14 7-23 21.5t-9 30.5v34Zm260-321q39 0 64.5-25.5T570-631q0-39-25.5-64.5T480-721q-39 0-64.5 25.5T390-631q0 39 25.5 64.5T480-541Zm0-90Zm0 411Z"/></svg>
+</span>
+                <h2>Sobre mi</h2>
+            </header>
+
+            <div class="about-grid">
+                <p class="about-card">
+                    Soy desarrolladora especializada en <strong>Oracle NetSuite</strong>, con 2 años de experiencia en el
+                    diseño, personalización e implementación de soluciones orientadas a optimizar procesos de negocio.
+                </p>
+                <p class="about-card">
+                    Tengo sólidos conocimientos en <strong>SuiteScript (2.x y 2.1)</strong>, creación de <strong>Saved
+                    Searches</strong>, Workflows y reportes personalizados, así como en la integración de NetSuite con
+                    aplicaciones externas mediante <strong>RESTlet</strong> y <strong>SuiteTalk (SOAP/REST)</strong>.
+                </p>
+                <p class="about-card">
+                    He participado en proyectos de <strong>automatización de procesos</strong> financieros, gestión de inventario y
+                    reportes gerenciales, trabajando en conjunto con áreas de negocio para adaptar NetSuite a sus necesidades.
+                </p>
+                <p class="about-card">
+                    Mi enfoque está orientado a la <strong>resolución de problemas</strong>, la mejora continua y la entrega de
+                    soluciones escalables, manteniendo buenas prácticas de desarrollo y documentación.
+                </p>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section">
+            <header class="section-header">
+                <span class="section-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg>
+
+                </span>
+                <h2>Skills</h2>
+            </header>
+            <p class="section-intro">
+                Siempre estoy <span class="accent">aprendiendo cosas nuevas</span>, pero estas son algunas de mis tecnologías,
+                frameworks y herramientas favoritas para crear soluciones:
+            </p>
+
+            <div class="skills-icons">
+
+                <img src="public/icons/python.svg" class="skill-icon" alt="Python" />
+                <img src="public/icons/java.svg" class="skill-icon" alt="Java" />
+                <img src="public/icons/javascript.svg" class="skill-icon" alt="JavaScript" />
+                <img src="public/icons/html.svg" class="skill-icon" alt="HTML5" />
+                <img src="public/icons/typescript.svg" class="skill-icon" alt="TypeScript" />
+                <img src="public/icons/nodejs.svg" class="skill-icon" alt="Node.js" />
+                <img src="public/icons/spring.svg" class="skill-icon" alt="Spring Boot" />
+                <img src="public/icons/mysql.svg" class="skill-icon" alt="MySQL" />
+                <img src="public/icons/mongodb.svg" class="skill-icon" alt="MongoDB" />
+                <img src="public/icons/git.svg" class="skill-icon" alt="Git" />
+                <img src="public/icons/docker.svg" class="skill-icon" alt="Docker" />
+                <img src="public/icons/oracle.svg" class="skill-icon" alt="NetSuite" />
+                <img src="public/icons/react.svg" class="skill-icon" alt="React" />
+                <img src="public/icons/intellij.svg" class="skill-icon" alt="IntelliJ" />
+                <img src="public/icons/jira.svg" class="skill-icon" alt="Jira" />
+                <img src="public/icons/jenkins.svg" class="skill-icon" alt="Jenkins" />
+
+
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section id="projects" class="section">
+            <header class="section-header">
+                <span class="section-emoji">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="M180-120q-24.75 0-42.37-17.63Q120-155.25 120-180v-600q0-24.75 17.63-42.38Q155.25-840 180-840h205q5-35 32-57.5t63-22.5q36 0 63 22.5t32 57.5h205q24.75 0 42.38 17.62Q840-804.75 840-780v600q0 24.75-17.62 42.37Q804.75-120 780-120H180Zm0-60h600v-600H180v600Zm100-100h273v-60H280v60Zm0-170h400v-60H280v60Zm0-170h400v-60H280v60Zm200-177q14 0 24.5-10.5T515-832q0-14-10.5-24.5T480-867q-14 0-24.5 10.5T445-832q0 14 10.5 24.5T480-797ZM180-180v-600 600Z"/></svg>
+
+                </span>
+                <h2>Proyectos</h2>
+            </header>
+
+            <p class="section-intro">
+                Estos son algunos de los proyectos con los que he trabajado recientemente,
+                combinando <span class="accent">NetSuite</span>, backend y desarrollo web:
+            </p>
+
+            <div class="card-grid">
+                <article class="project-card">
+                    <img src="public/ecommerce.jpeg" alt="E-Commerce" />
+                    <div class="project-body">
+                        <h3>E-Commerce Platform</h3>
+                        <p>
+                            Plataforma de e-commerce moderna y escalable, con gestión de
+                            inventario en tiempo real, integración de medios de pago y panel de
+                            administración para el negocio.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="public/taskmanagement.png" alt="Task Management" />
+                    <div class="project-body">
+                        <h3>Task Management App</h3>
+                        <p>
+                            Aplicación para gestión de tareas y proyectos con panel de equipo,
+                            estados personalizados, notificaciones y analíticas básicas.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">JWT</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="public/netsuite.jpeg" alt="Netsuite" />
+                    <div class="project-body">
+                        <h3>NetSuite Custom SuiteScripts</h3>
+                        <p>
+                            Conjunto de soluciones en NetSuite: automatización de flujos de
+                            aprobación, reportes personalizados, integraciones REST/SOAP y
+                            Suitelets para mejorar la operación diaria.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tag">SuiteScript 2.x</span>
+                            <span class="tag">RESTlet</span>
+                            <span class="tag">Suitelet</span>
+                            <span class="tag">Saved Searches</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="public/foodstore.png" alt="Food Store" />
+                    <div class="project-body">
+                        <h3>Food Store API & Frontend</h3>
+                        <p>
+                            API REST en Spring Boot para gestión de productos, pedidos y usuarios,
+                            con frontend en TypeScript que consume la API y maneja carrito de
+                            compras.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="public/ticketsupport.png" alt="Ticket Support" />
+                    <div class="project-body">
+                        <h3>Ticket Support Platform</h3>
+                        <p>
+                            Flujo donde cada caso de soporte en NetSuite crea automáticamente una incidencia en Jira.
+                            El sistema mantiene sincronizados los estados entre ambas plataformas.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="public/aipow.jpeg" alt="AI powered analytics" />
+                    <div class="project-body">
+                        <h3>AI-Powered Analytics</h3>
+                        <p>
+                            Plataforma de visualización de datos con insights de machine learning,
+                            analítica predictiva y paneles interactivos.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tag">Python</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- EXPERIENCIA -->
+        <section id="experience" class="section">
+            <header class="section-header">
+                <span class="section-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="M140-120q-24 0-42-18t-18-42v-480q0-24 18-42t42-18h180v-100q0-24 18-42t42-18h200q24 0 42 18t18 42v100h180q24 0 42 18t18 42v480q0 24-18 42t-42 18H140Zm0-60h680v-480H140v480Zm240-540h200v-100H380v100ZM140-180v-480 480Z"/></svg>
+
+                </span>
+                <h2>Experiencia</h2>
+            </header>
+
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="timeline-icon">💼</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Oracle Netsuite Consultora Funcional Junior</h3>
+                            <span class="timeline-dates">2025 – Presente</span>
+                        </div>
+                        <p class="timeline-company">Adistec SAC</p>
+                        <p>
+                            Responsable del desarrollo y mantenimiento de soluciones en NetSuite, incluyendo scripts (Client, User
+                            Event, Scheduled), reportes personalizados y optimización de procesos existentes. Apoyo en tareas de
+                            mantenimiento correctivo y evolutivo.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-icon">💼</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Oracle Netsuite Developer Junior</h3>
+                            <span class="timeline-dates">2024 – 2025</span>
+                        </div>
+                        <p class="timeline-company">LatamReady Corp</p>
+                        <p>
+                            Desarrollo de personalizaciones y automatizaciones en NetSuite mediante SuiteScript 2.x, Saved Searches y
+                            Workflows. Colaboración en integraciones con sistemas externos y soporte técnico para incidencias de
+                            clientes.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-icon">💼</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Oracle Netsuite Consultora Funcional Junior</h3>
+                            <span class="timeline-dates">2023 – 2024</span>
+                        </div>
+                        <p class="timeline-company">LatamReady Corp</p>
+                        <p>
+                            Apoyo en la implementación y parametrización de NetSuite para clientes de toda Latinoamérica colaborando en
+                            la definición de procesos financieros y operativos. Participación en pruebas, documentación y soporte
+                            funcional de primera línea.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contact" class="section">
+            <header class="section-header">
+                <span class="section-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="M140-160q-24 0-42-18t-18-42v-520q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm340-302L140-685v465h680v-465L480-462Zm0-60 336-218H145l335 218ZM140-685v-55 520-465Z"/></svg>
+
+                </span>
+                <h2>Contacto</h2>
+            </header>
+
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <h3>Pongámonos en contacto! :)</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e3e3e3"><path d="M140-160q-24 0-42-18t-18-42v-520q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm340-302L140-685v465h680v-465L480-462Zm0-60 336-218H145l335 218ZM140-685v-55 520-465Z"/></svg>
+
+                        </span>
+                        <div>
+                            <p class="label">Email</p>
+                            <a href="mailto:celina.lopez2799@gmail.com">celina.lopez2799@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e3e3e3"><path d="M60-120q-24 0-42-18T0-180v-600q0-24 18-42t42-18h840q24 0 42 18t18 42v600q0 24-18 42t-42 18H60Zm531-60h309v-600H60v600h7q44-69 112.5-109T329-329q81 0 149.5 40T591-180ZM329-400q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm427 172 77-76-57-81h-70q-9-25-12.5-46.5T690-479q0-26 3.5-47t12.5-47h70l57-81-77-76q-55 45-85.5 111T640-479q0 74 30.5 140T756-228Zm-613 48h372q-35.61-42.27-84.3-65.64Q382-269 329-269t-101.5 23.5Q179-222 143-180Zm186-280q-25.5 0-42.75-17.25T269-520q0-25.5 17.25-42.75T329-580q25.5 0 42.75 17.25T389-520q0 25.5-17.25 42.75T329-460Zm151-20Z"/></svg>
+                        </span>
+                        <div>
+                            <p class="label">Teléfono</p>
+                            <a href="tel:2612431231">2612431231</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#e3e3e3"><path d="M480.09-490q28.91 0 49.41-20.59 20.5-20.59 20.5-49.5t-20.59-49.41q-20.59-20.5-49.5-20.5t-49.41 20.59q-20.5 20.59-20.5 49.5t20.59 49.41q20.59 20.5 49.5 20.5ZM480-159q133-121 196.5-219.5T740-552q0-117.79-75.29-192.9Q589.42-820 480-820t-184.71 75.1Q220-669.79 220-552q0 75 65 173.5T480-159Zm0 79Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
+                        </span>
+                        <div>
+                            <p class="label">Ubicación</p>
+                            <p>Tent Cowork, Aristides Villanueva 430</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <h3>Dejame un mensaje</h3>
+                    <div class="form-row">
+                        <input type="text" name="nombre" placeholder="Nombre" required />
+                        <input type="text" name="apellido" placeholder="Apellido" required />
+                    </div>
+                    <input type="email" name="email" placeholder="Correo Electrónico" required />
+                    <input type="text" name="subject" placeholder="Asunto" />
+                    <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+                    <button type="submit" class="btn primary full-width">Enviar</button>
+                </form>
+            </div>
+
+            <footer class="site-footer">
+                © 2025 Celina Lopez · Todos los derechos reservados
+            </footer>
+        </section>
+    </main>
+</div>
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
