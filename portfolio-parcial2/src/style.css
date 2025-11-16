@@ -973,6 +973,7 @@ body.menu-open {
     overflow: hidden;
 }
 
+/* RESPONSIVE */
 
 /* Topbar y ocultar sidebar en mobile */
 @media (max-width: 768px) {
@@ -1028,7 +1029,6 @@ body.menu-open {
     }
 }
 
-/* RESPONSIVE */
 
 @media (max-width: 1080px) {
     #app {
